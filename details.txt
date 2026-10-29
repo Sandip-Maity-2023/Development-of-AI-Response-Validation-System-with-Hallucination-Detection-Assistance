@@ -1,0 +1,40 @@
++---------------------------------------+
+                      |       Evaluation Input Module         |
+                      |  (Single Entry / CSV Batch Upload)   |
+                      +-------------------+-------------------+
+                                          |
+                                          v
+                      +-------------------+-------------------+
+                      |   RAG Engine / Reference Retriever    |
+                      |  (ChromaDB + Vector Embeddings)       |
+                      +-------------------+-------------------+
+                                          |
+                                          v
+        +---------------------------------+---------------------------------+
+        |           Multi-Agent Judging Orchestration Layer              |
+        |               (Executes Agents in Parallel)                       |
+        +-------+------------------+------------------+------------------+--+
+                |                  |                  |                  |
+                v                  v                  v                  v
+        +---------------+  +---------------+  +---------------+  +---------------+
+        |  Relevance    |  |   Accuracy    |  | Hallucination |  | Completeness  |
+        |  Judge Agent  |  |  Judge Agent  |  | Detector Agent|  |  Judge Agent  |
+        +-------+-------+  +-------+-------+  +-------+-------+  +-------+-------+
+                |                  |                  |                  |
+                +------------------+--------+---------+------------------+
+                                            |
+                                            v
+                                 +---------------------+
+                                 |    Verdict Agent    |
+                                 | (Weighted Score +   |
+                                 |  Consolidated Reasoning)              |
+                                 +----------+----------+
+                                            |
+                                            v
+                      +---------------------+---------------------+
+                      | Evaluation Scoring Dashboard & PDF Export |
+                      +-------------------------------------------+
+
+
+
+                      
