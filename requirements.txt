@@ -2,3 +2,9 @@ https://share.gemini.google/Kpc47u1U5Wof
 
 https://gemini.google.com/app/3aa94204608e47bb
 
+git checkout -b master
+
+PS E:\Development-of-AI-Response-Validation-System-with-Hallucination-Detection-Assistance> git branch
+  main
+* master
+
