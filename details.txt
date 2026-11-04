@@ -1,3 +1,63 @@
+
+ai-response-evaluator/
+├── backend/
+│   ├── data/
+│   │   ├── benchmarks/          # SQuAD, TruthfulQA raw and sample files
+│   │   └── uploads/             # User-uploaded batch CSV files
+│   ├── src/
+│   │   ├── __init__.py
+│   │   ├── config.py            # Configuration, LLM endpoints, environment variables
+│   │   ├── agents/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py          # Base judge agent class and prompt templates
+│   │   │   ├── relevance.py     # Relevance Judge Agent
+│   │   │   ├── accuracy.py      # Accuracy Judge Agent
+│   │   │   ├── hallucination.py # Hallucination Detection Agent
+│   │   │   ├── completeness.py  # Completeness Judge Agent
+│   │   │   └── verdict.py       # Verdict Aggregator Agent
+│   │   ├── rag/
+│   │   │   ├── __init__.py
+│   │   │   ├── chunker.py       # Document chunking logic
+│   │   │   ├── embedder.py      # Embedding generator
+│   │   │   └── vector_store.py  # ChromaDB local indexer
+│   │   ├── pipeline/
+│   │   │   ├── __init__.py
+│   │   │   ├── single_eval.py   # Single evaluation orchestrator
+│   │   │   └── batch_eval.py    # Batch CSV processor & orchestrator
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   └── exporter.py      # PDF & JSON report generation
+│   │   └── main.py              # FastAPI app entry point & API endpoints
+│   ├── tests/
+│   │   ├── test_agents.py
+│   │   ├── test_rag.py
+│   │   └── test_pipeline.py
+│   ├── .env.example
+│   └── requirements.txt
+└── frontend/
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Navbar.jsx
+    │   │   ├── SingleEvaluator.jsx  # Single question-answer evaluation form
+    │   │   ├── BatchEvaluator.jsx   # CSV batch upload & progress view
+    │   │   ├── Dashboard.jsx        # Analytics, pass/fail charts, trends
+    │   │   └── ResultCard.jsx       # Expandable reasoning & agent breakdown
+    │   ├── services/
+    │   │   └── api.js           # Axios/Fetch client connecting to FastAPI
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   └── index.css            # Tailwind CSS directives
+    ├── package.json
+    ├── tailwind.config.js
+    └── vite.config.js
+
+
+
+
+
+
+
 +---------------------------------------+
                       |       Evaluation Input Module         |
                       |  (Single Entry / CSV Batch Upload)   |

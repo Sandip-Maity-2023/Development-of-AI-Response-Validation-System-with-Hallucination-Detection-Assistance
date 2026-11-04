@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
-from src.schema.models import AgentScoreOutput
-from config.prompts import HALLUCINATION_PROMPT
+from backend.src.schema.models import AgentScoreOutput
+from backend.config.prompts import HALLUCINATION_PROMPT
 
 class HallucinationDetectionAgent:
     def __init__(self, model_name: str = "gpt-4o"):

@@ -1,10 +1,10 @@
 import asyncio
-from src.agents.relevance_agent import RelevanceJudgeAgent
-from src.agents.accuracy_agent import AccuracyJudgeAgent
-from src.agents.hallucination_agent import HallucinationDetectionAgent
-from src.agents.completeness_agent import CompletenessJudgeAgent
-from src.agents.verdict_agent import VerdictAgent
-from src.rag.retriever import ReferenceRetriever
+from backend.src.agents.relevance_agent import RelevanceJudgeAgent
+from backend.src.agents.accuracy_agent import AccuracyJudgeAgent
+from backend.src.agents.hallucination_agent import HallucinationDetectionAgent
+from backend.src.agents.completeness_agent import CompletenessJudgeAgent
+from backend.src.agents.verdict_agent import VerdictAgent
+from backend.src.rag.retriever import ReferenceRetriever
 
 class EvaluationOrchestrator:
     def __init__(self):
