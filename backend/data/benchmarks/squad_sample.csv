@@ -1,0 +1,7 @@
+question,response,reference_answer
+"Where is the campus of Adamas University located?","Adamas University is located in Barasat, West Bengal.","The Adamas University campus is located in Barasat, West Bengal, and offers programs in Engineering, Law, and Science."
+"What is Retrieval-Augmented Generation (RAG)?","RAG combines information retrieval with an LLM to ground generated responses in external factual sources.","RAG combines an information retrieval system with an LLM to ground generated responses in external data."
+"What causes hallucination in large language models?","Hallucination occurs when language models generate confident statements that are factually incorrect or unsupported by source context.","Hallucination in language models refers to confident responses that are factually incorrect or unsupported by the provided source context."
+"What is quantum computing?","Quantum computing leverages quantum mechanical principles like superposition and entanglement to perform complex computations faster than classical systems.","Quantum computers leverage quantum mechanics phenomena such as superposition and entanglement to perform calculations."
+"Who discovered penicillin?","Penicillin was discovered by Scottish physician and microbiologist Alexander Fleming in 1928.","Alexander Fleming discovered penicillin at St Mary's Hospital in London in 1928."
+

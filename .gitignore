@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments and Secrets
+.env
+.env*.local
+backend/.env
+frontend/.env
+
+# Large model weights (prevent GitHub 100MB rejection)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+backend/hallucination_model/hallucination_model/model.safetensors
+backend/hallucination_model/hallucination_model/training_args.bin
+
+# Databases & Vector store local data
+*.db
+*.db-journal
+*.sqlite3
+backend/evaluator.db
+backend/data/chroma/
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
+
+# Node / Frontend builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+.npm
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
